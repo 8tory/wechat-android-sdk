@@ -67,21 +67,21 @@ public class GetFromWXActivity extends Activity {
 							return;
 						}
 						
-						// ³õÊ¼»¯Ò»¸öWXTextObject¶ÔÏó
+						// åˆå§‹åŒ–ä¸€ä¸ªWXTextObjectå¯¹è±¡
 						WXTextObject textObj = new WXTextObject();
 						textObj.text = text;
 
-						// ÓÃWXTextObject¶ÔÏó³õÊ¼»¯Ò»¸öWXMediaMessage¶ÔÏó
+						// ç”¨WXTextObjectå¯¹è±¡åˆå§‹åŒ–ä¸€ä¸ªWXMediaMessageå¯¹è±¡
 						WXMediaMessage msg = new WXMediaMessage(textObj);
 						msg.description = text;
 						
-						// ¹¹ÔìÒ»¸öResp
+						// æ„é€ ä¸€ä¸ªResp
 						GetMessageFromWX.Resp resp = new GetMessageFromWX.Resp();
-						// ½«reqµÄtransactionÉèÖÃµ½resp¶ÔÏóÖĞ£¬ÆäÖĞbundleÎªÎ¢ĞÅ´«µİ¹ıÀ´µÄintentËù´øµÄÄÚÈİ£¬Í¨¹ıgetExtras·½·¨»ñÈ¡
+						// å°†reqçš„transactionè®¾ç½®åˆ°respå¯¹è±¡ä¸­ï¼Œå…¶ä¸­bundleä¸ºå¾®ä¿¡ä¼ é€’è¿‡æ¥çš„intentæ‰€å¸¦çš„å†…å®¹ï¼Œé€šè¿‡getExtrasæ–¹æ³•è·å–
 						resp.transaction = getTransaction();
 						resp.message = msg;
 						
-						// µ÷ÓÃapi½Ó¿ÚÏìÓ¦Êı¾İµ½Î¢ĞÅ
+						// è°ƒç”¨apiæ¥å£å“åº”æ•°æ®åˆ°å¾®ä¿¡
 						api.sendResp(resp);
 						finish();
 					}
@@ -100,7 +100,7 @@ public class GetFromWXActivity extends Activity {
 				WXMediaMessage msg = new WXMediaMessage();
 				msg.mediaObject = imgObj;
 
-				// ÉèÖÃÏûÏ¢µÄËõÂÔÍ¼
+				// è®¾ç½®æ¶ˆæ¯çš„ç¼©ç•¥å›¾
 				Bitmap thumbBmp = Bitmap.createScaledBitmap(bmp, THUMB_SIZE, THUMB_SIZE, true);
 				bmp.recycle();
 				msg.thumbData = Util.bmpToByteArray(thumbBmp, true);

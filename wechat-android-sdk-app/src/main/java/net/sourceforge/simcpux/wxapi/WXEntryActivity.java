@@ -30,7 +30,7 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler{
 	
 	private Button gotoBtn, regBtn, launchBtn, checkBtn;
 	
-	// IWXAPI ÊÇµÚÈı·½appºÍÎ¢ĞÅÍ¨ĞÅµÄopenapi½Ó¿Ú
+	// IWXAPI æ˜¯ç¬¬ä¸‰æ–¹appå’Œå¾®ä¿¡é€šä¿¡çš„openapiæ¥å£
     private IWXAPI api;
 	
     @Override
@@ -38,7 +38,7 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.entry);
         
-        // Í¨¹ıWXAPIFactory¹¤³§£¬»ñÈ¡IWXAPIµÄÊµÀı
+        // é€šè¿‡WXAPIFactoryå·¥å‚ï¼Œè·å–IWXAPIçš„å®ä¾‹
     	api = WXAPIFactory.createWXAPI(this, Constants.APP_ID, false);
 
     	regBtn = (Button) findViewById(R.id.reg_btn);
@@ -46,7 +46,7 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler{
 			
 			@Override
 			public void onClick(View v) {
-				// ½«¸Ãapp×¢²áµ½Î¢ĞÅ
+				// å°†è¯¥appæ³¨å†Œåˆ°å¾®ä¿¡
 			    api.registerApp(Constants.APP_ID);    	
 			}
 		});
@@ -95,7 +95,7 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler{
         api.handleIntent(intent, this);
 	}
 
-	// Î¢ĞÅ·¢ËÍÇëÇóµ½µÚÈı·½Ó¦ÓÃÊ±£¬»á»Øµ÷µ½¸Ã·½·¨
+	// å¾®ä¿¡å‘é€è¯·æ±‚åˆ°ç¬¬ä¸‰æ–¹åº”ç”¨æ—¶ï¼Œä¼šå›è°ƒåˆ°è¯¥æ–¹æ³•
 	@Override
 	public void onReq(BaseReq req) {
 		switch (req.getType()) {
@@ -110,7 +110,7 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler{
 		}
 	}
 
-	// µÚÈı·½Ó¦ÓÃ·¢ËÍµ½Î¢ĞÅµÄÇëÇó´¦ÀíºóµÄÏìÓ¦½á¹û£¬»á»Øµ÷µ½¸Ã·½·¨
+	// ç¬¬ä¸‰æ–¹åº”ç”¨å‘é€åˆ°å¾®ä¿¡çš„è¯·æ±‚å¤„ç†åçš„å“åº”ç»“æœï¼Œä¼šå›è°ƒåˆ°è¯¥æ–¹æ³•
 	@Override
 	public void onResp(BaseResp resp) {
 		int result = 0;
@@ -144,7 +144,7 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler{
 		WXMediaMessage wxMsg = showReq.message;		
 		WXAppExtendObject obj = (WXAppExtendObject) wxMsg.mediaObject;
 		
-		StringBuffer msg = new StringBuffer(); // ×éÖ¯Ò»¸ö´ıÏÔÊ¾µÄÏûÏ¢ÄÚÈİ
+		StringBuffer msg = new StringBuffer(); // ç»„ç»‡ä¸€ä¸ªå¾…æ˜¾ç¤ºçš„æ¶ˆæ¯å†…å®¹
 		msg.append("description: ");
 		msg.append(wxMsg.description);
 		msg.append("\n");

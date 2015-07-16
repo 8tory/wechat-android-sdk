@@ -80,24 +80,24 @@ public class SendToWXActivity extends Activity {
 							return;
 						}
 						
-						// ³õÊ¼»¯Ò»¸öWXTextObject¶ÔÏó
+						// åˆå§‹åŒ–ä¸€ä¸ªWXTextObjectå¯¹è±¡
 						WXTextObject textObj = new WXTextObject();
 						textObj.text = text;
 
-						// ÓÃWXTextObject¶ÔÏó³õÊ¼»¯Ò»¸öWXMediaMessage¶ÔÏó
+						// ç”¨WXTextObjectå¯¹è±¡åˆå§‹åŒ–ä¸€ä¸ªWXMediaMessageå¯¹è±¡
 						WXMediaMessage msg = new WXMediaMessage();
 						msg.mediaObject = textObj;
-						// ·¢ËÍÎÄ±¾ÀàĞÍµÄÏûÏ¢Ê±£¬title×Ö¶Î²»Æğ×÷ÓÃ
+						// å‘é€æ–‡æœ¬ç±»å‹çš„æ¶ˆæ¯æ—¶ï¼Œtitleå­—æ®µä¸èµ·ä½œç”¨
 						// msg.title = "Will be ignored";
 						msg.description = text;
 
-						// ¹¹ÔìÒ»¸öReq
+						// æ„é€ ä¸€ä¸ªReq
 						SendMessageToWX.Req req = new SendMessageToWX.Req();
-						req.transaction = buildTransaction("text"); // transaction×Ö¶ÎÓÃÓÚÎ¨Ò»±êÊ¶Ò»¸öÇëÇó
+						req.transaction = buildTransaction("text"); // transactionå­—æ®µç”¨äºå”¯ä¸€æ ‡è¯†ä¸€ä¸ªè¯·æ±‚
 						req.message = msg;
 						req.scene = isTimelineCb.isChecked() ? SendMessageToWX.Req.WXSceneTimeline : SendMessageToWX.Req.WXSceneSession;
 						
-						// µ÷ÓÃapi½Ó¿Ú·¢ËÍÊı¾İµ½Î¢ĞÅ
+						// è°ƒç”¨apiæ¥å£å‘é€æ•°æ®åˆ°å¾®ä¿¡
 						api.sendReq(req);
 						finish();
 					}
@@ -125,7 +125,7 @@ public class SendToWXActivity extends Activity {
 							
 							Bitmap thumbBmp = Bitmap.createScaledBitmap(bmp, THUMB_SIZE, THUMB_SIZE, true);
 							bmp.recycle();
-							msg.thumbData = Util.bmpToByteArray(thumbBmp, true);  // ÉèÖÃËõÂÔÍ¼
+							msg.thumbData = Util.bmpToByteArray(thumbBmp, true);  // è®¾ç½®ç¼©ç•¥å›¾
 
 							SendMessageToWX.Req req = new SendMessageToWX.Req();
 							req.transaction = buildTransaction("img");

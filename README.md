@@ -35,6 +35,14 @@ dependencies {
 }
 ```
 
+## checksum
+
+1.0.0:
+
+```
+3c77be8d418d3d8f7e0555478005bdbc  libammsdk.jar
+```
+
 ## License
 
 ```

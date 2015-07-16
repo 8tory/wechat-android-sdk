@@ -1,1 +1,2 @@
 include 'wechat-android-sdk'
+include 'wechat-android-sdk-app'

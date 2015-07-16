@@ -7,6 +7,8 @@
 
 ![](art/wechat.png)
 
+From http://dev.wechat.com/ .
+
 ## Installation
 
 via jcenter:

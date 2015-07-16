@@ -1,5 +1,12 @@
 # WeChat Android SDK
 
+[![Download](https://api.bintray.com/packages/8tory/maven/wechat-android-sdk/images/download.svg) ](https://bintray.com/8tory/maven/wechat-android-sdk/_latestVersion)
+[![JitPack](https://img.shields.io/github/tag/8tory/wechat-android-sdk.svg?label=JitPack)](https://jitpack.io/#8tory/wechat-android-sdk)
+[![Build Status](https://travis-ci.org/8tory/wechat-android-sdk.svg)](https://travis-ci.org/8tory/wechat-android-sdk)
+[![Join the chat at https://gitter.im/8tory/wechat-android-sdk](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/8tory/wechat-android-sdk?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+![](art/wechat.png)
+
 ## Installation
 
 via jcenter:

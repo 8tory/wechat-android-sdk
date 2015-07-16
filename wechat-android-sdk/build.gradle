@@ -23,6 +23,19 @@ android {
         minSdkVersion 8
         targetSdkVersion 22
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 22
+        //versionName project.VERSION_NAME
+        //versionCode Integer.parseInt(project.VERSION_CODE)
+        consumerProguardFiles 'wechat.pro'
+    }
 }
 
 dependencies {

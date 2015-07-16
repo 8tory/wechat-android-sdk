@@ -1,0 +1,2 @@
+-keep class com.tencent.mm.sdk.** { *; }
+-dontwarn com.tencent.mm.sdk.**
